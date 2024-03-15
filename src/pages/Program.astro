@@ -6,7 +6,9 @@ const data = await fetch("https://hzlnmksfeofnwrqcgxle.supabase.co", {
     headers: {
         apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6bG5ta3NmZW9mbndycWNneGxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2Mzk1MTQsImV4cCI6MjAyNTIxNTUxNH0.kkCz0Mlt8q5ERtHrXFhVCHziAFijhygJ6aZyOuUWZ6k"
     }
-}).then(res=>res.json());
+}).then((response) => {
+  return response.json();
+});
 
 console.log(data);
 
