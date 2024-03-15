@@ -1,0 +1,42 @@
+---
+import ArtistSingleView from "../../components/ArtistSingleView.astro"
+import "../../styles/generel.css"
+import MainLayout from "../../layouts/MainLayout.astro"
+
+export async function getStaticPaths() {
+  const data = await fetch("https://hzlnmksfeofnwrqcgxle.supabase.co/rest/v1/artists", {
+    method: "GET", 
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6bG5ta3NmZW9mbndycWNneGxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2Mzk1MTQsImV4cCI6MjAyNTIxNTUxNH0.kkCz0Mlt8q5ERtHrXFhVCHziAFijhygJ6aZyOuUWZ6k"
+    }
+}).then(response => response.json());
+
+  return data.map((artist) => {
+    return {
+      params: { slug: artist.slug },
+      props: { myData:artist },
+    };
+  });
+}
+
+const {myData} = Astro.props
+console.log(myData)
+---
+
+<MainLayout title="{myData.slug}">
+    <article>
+        <h1>{myData.artist_name}</h1>
+        <h2>{myData.date}</h2>
+        <h2>{myData.time_stable}</h2>
+        <p>{myData.artist_description}</p>
+    </article>
+    
+    <!-- {
+        myData.map((artist) => {
+          return <ArtistSingleView data={artist} />;
+        })
+      } -->
+
+        
+        
+    </MainLayout>

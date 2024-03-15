@@ -1,0 +1,9 @@
+---
+const {data} = Astro.props;
+console.log(data)
+---
+
+<a href= {`artistinfo/${data.slug}`}>
+<h3>{data.artist_name}</h3>
+</a>
+
