@@ -2,15 +2,15 @@
 ---
 <div id="news-form">
     <div id="news-tekst">
-        <h4>Sign up to our News Letter:</h4>
+        <h3>Sign up to our Newsletter:</h3>
     </div>
 <form>
     <label id="name" for="formname"></label>
-    <input type="text" id="formname" name="firstname" placeholder="Your name...">
+    <input type="text" id="formname" name="firstname" placeholder="First name:">
     <label id="country" for="countryname"></label>
-    <input type="text" id="countryname" name="nameofcountry" placeholder="Your country...">
+    <input type="text" id="countryname" name="nameofcountry" placeholder="Country:">
     <label id="email" for="emailname"></label>
-    <input type="text" id="emailname" name="nameofemail" placeholder="Your e-mail...">
+    <input type="text" id="emailname" name="nameofemail" placeholder="E-mail:">
     <img src="../public/pil.svg" alt="pil">
 </form>
 </div>
@@ -18,7 +18,7 @@
 <style>
 
     #news-form{
-        width: 600px;
+        max-width: 600px;
     }
     form{
         display: grid;
@@ -67,5 +67,6 @@ img{
     grid-row: 2;
     justify-self: center;
     align-self: center;
+    
 }
 </style>
