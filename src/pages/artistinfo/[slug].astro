@@ -2,6 +2,7 @@
 import ArtistSingleView from "../../components/ArtistSingleView.astro"
 import "../../styles/generel.css"
 import MainLayout from "../../layouts/MainLayout.astro"
+import ArtistButtons from "../../components/ArtistButtons.astro"
 
 export async function getStaticPaths() {
   const data = await fetch("https://hzlnmksfeofnwrqcgxle.supabase.co/rest/v1/artists", {
@@ -25,7 +26,8 @@ console.log(myData)
 
 <MainLayout title="{myData.slug}">
     <article>
-        <h1>{myData.artist_name}</h1>
+      <h1>{myData.artist_name}</h1>
+      <ArtistButtons />
         <h2>{myData.date}</h2>
         <h2>{myData.time_stable}</h2>
         <p>{myData.artist_description}</p>
