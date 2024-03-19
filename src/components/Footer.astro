@@ -4,7 +4,7 @@ import SoMeButtons from "../components/SoMeButtons.astro"
 ---
 <footer>
     <div> <NewsLetter /></div>
-    <div class="hej"><SoMeButtons /></div>
+    <div class="buttons"><SoMeButtons /></div>
 </footer>
 
 <style>
@@ -12,7 +12,6 @@ import SoMeButtons from "../components/SoMeButtons.astro"
     footer{
             display: flex;
             flex-direction: column;
-            
         }
     /* større end 100px */
     @media (min-width: 1000px) {
@@ -21,7 +20,7 @@ import SoMeButtons from "../components/SoMeButtons.astro"
             flex-direction: row;
             justify-content: space-between;
         }
-        .hej{
+        .buttons{
             order:-1;
         }
     }
