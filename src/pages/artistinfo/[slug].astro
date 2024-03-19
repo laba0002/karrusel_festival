@@ -3,7 +3,6 @@ import ArtistSingleView from "../../components/ArtistSingleView.astro"
 import "../../styles/generel.css"
 import MainLayout from "../../layouts/MainLayout.astro"
 import ArtistButtons from "../../components/ArtistButtons.astro"
-import LightLine from "../../components/LightLine.astro"
 
 export async function getStaticPaths() {
   const data = await fetch("https://hzlnmksfeofnwrqcgxle.supabase.co/rest/v1/artists", {
@@ -41,7 +40,6 @@ console.log(myData)
       </div>
 
   </article>
-  <LightLine>
 
 </MainLayout>
 
