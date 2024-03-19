@@ -1,0 +1,77 @@
+---
+---
+<div id="news-form">
+    <div id="news-tekst">
+        <h3>Sign up to our Newsletter:</h3>
+    </div>
+<form>
+    <label id="name" for="formname"></label>
+    <input type="text" id="formname" name="firstname" placeholder="First name:">
+    <label id="country" for="countryname"></label>
+    <input type="text" id="countryname" name="nameofcountry" placeholder="Country:">
+    <label id="email" for="emailname"></label>
+    <input type="text" id="emailname" name="nameofemail" placeholder="E-mail:">
+    <img src="/pil.svg" alt="pil">
+</form>
+</div>
+
+<style>
+
+    #news-form{
+        max-width: 600px;
+    }
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-self: stretch;
+        border: 5px solid #E3F9C6;
+        margin-top: 20px;
+    }
+#formname{
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    border-bottom: 5px solid #E3F9C6;
+    border-right: 5px solid #E3F9C6;
+}
+#countryname{
+    display: grid;
+    grid-column: 4/ span 6;
+    grid-row: 1;
+    border-bottom: 5px solid #E3F9C6;
+}
+#emailname{
+    display: grid;
+    grid-column: 1/ span 4;
+    grid-row: 2; 
+    border-right: 5px solid #E3F9C6;
+}
+label{
+    font-family: "Space Grotesk", sans-serif;
+    color: white;
+}
+input{
+    font-family: "Space Grotesk", sans-serif;
+    color: white; 
+    background-color:#1c1e28;
+    padding: 10px;
+   border: none;
+    margin: none;
+    gap: none;
+}
+img{
+    max-width: 35px;
+    height: auto;
+    display: grid;
+    grid-column: 5/ span 6;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    
+}
+@media (max-width: 1000px) {
+    form{
+margin-top:0px;
+    }
+</style>

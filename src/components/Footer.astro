@@ -1,0 +1,28 @@
+---
+import NewsLetter from "../components/NewsLetter.astro"
+import SoMeButtons from "../components/SoMeButtons.astro"
+---
+<footer>
+    <div> <NewsLetter /></div>
+    <div class="buttons"><SoMeButtons /></div>
+</footer>
+
+<style>
+
+    footer{
+            display: flex;
+            flex-direction: column;
+        }
+    /* større end 100px */
+    @media (min-width: 1000px) {
+        footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0px 20px 0px 20px;
+        }
+        .buttons{
+            order:-1;
+        }
+    }
+</style>
