@@ -10,6 +10,11 @@ img {
   display: block;
 }
 
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: 25px;
+}
 /** Variabler **/
 
 :root {
