@@ -1,0 +1,87 @@
+<!-- <menu class="menuparent">
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+</menu> -->
+<div class="hamburger">
+    <span class="burgerbar"></span>
+    <span class="burgerbar"></span>
+    <span class="burgerbar"></span>
+</div>
+
+<style>
+.hamburger.active .burgerbar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .burgerbar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .burgerbar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.burgerbar {
+  display: block;
+  width: 30px;
+  height: 3.5px;
+  margin-bottom: 5px;
+  background-color: #B5FF53;
+  border-radius: 3px;
+  position: relative;
+  z-index: 20;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    max-width: min-content;
+  }
+
+  .hamburger {
+    display: block;
+    /* position: absolute;
+    top: 5%;
+    left: 87%; */
+  }
+
+  .menuparent.active {
+    right: 0;
+    top: 0;
+    opacity: 100%;
+    height: 1200px;
+    width: 250px;
+    z-index: 20;
+    gap: 45px;
+    padding-top: 180px;
+  }
+
+  .menuparent {
+    opacity: 0;
+    right: 0;
+    position: absolute;
+    font-family: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 1.5rem;
+    height: 0;
+    width: 0;
+    list-style: none;
+    color: --background-color;
+    background-color: #aec6e7;
+    top: 14%;
+    text-transform: uppercase;
+  }
+}
+
+</style>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menuparent");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+</script>

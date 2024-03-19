@@ -5,9 +5,8 @@ import "../styles/generel.css"
 ---
 
 <header>
-   <img id="logo_img" src="/public/svg/logo_1.svg" alt="logo" id="logo">
-<section class="head_container">
     <p id="countdown"></p>
+    <section class="head_container">
     <BuyTicketButton></BuyTicketButton>
     <BurgerMenu></BurgerMenu>
 </section>
@@ -15,18 +14,12 @@ import "../styles/generel.css"
 
 <style>
 #countdown{
-    font-size: 1rem;
+    font-size: 2rem;
     }
-#logo_img{
-    max-width: 100%;
-    width: 80px;
-    margin: 17px;
-    margin-left: 2px;
-    margin-right: 0;
-}
+
 header{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     margin-right: 10px;
 }
 .head_container{
@@ -39,12 +32,7 @@ header{
     }
   @media (min-width: 800px) {
     #countdown{
-    font-size: 2rem;
-    }
-    #logo_img{
-    width: 130px;
-    margin-top: 20px;
-    margin-left: 10px;
+    font-size: 4rem;
 }  
     .head_container{
         gap: 27px;
