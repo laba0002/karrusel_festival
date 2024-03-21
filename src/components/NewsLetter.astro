@@ -5,13 +5,13 @@
         <h3>Sign up to our Newsletter:</h3>
     </div>
 <form name="newsletterform" netlify>
-    <label id="name" for="formname"></label>
-    <input type="text" id="formname" name="firstname" placeholder="First name:">
-    <label id="country" for="countryname"></label>
-    <input type="text" id="countryname" name="nameofcountry" placeholder="Country:">
-    <label id="email" for="emailname"></label>
-    <input type="text" id="emailname" name="nameofemail" placeholder="E-mail:">
-    <svg id="pil-svg" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.41 28.74">
+    <label id="name" for="formname"> <input type="text" id="formname" name="firstname" placeholder="First name:"></label>
+   
+    <label id="country" for="countryname"><input type="text" id="countryname" name="nameofcountry" placeholder="Country:"></label>
+    
+    <label id="email" for="emailname"><input type="text" id="emailname" name="nameofemail" placeholder="E-mail:"></label>
+    
+    <button type="submit"><svg id="pil-svg" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.41 28.74">
         <defs>
           <style>
             .arrow {
@@ -23,12 +23,18 @@
         <g id="Layer_1-2" data-name="Layer 1">
           <polygon class="arrow" points="42.03 0 39.91 2.12 50.66 12.87 0 12.87 0 15.87 50.66 15.87 39.91 26.62 42.03 28.74 56.41 14.37 42.03 0"/>
         </g>
-      </svg>
+      </svg></button>
 </form>
 </div>
 
 <style>
-#pil-svg:hover .arrow{
+    button{
+        background-color: transparent;
+        color: transparent;
+        border: transparent;
+    }
+    
+ #pil-svg:hover .arrow{
     fill:white;
     transform: rotate(0.01turn);
 }
@@ -43,20 +49,20 @@
         border: 5px solid #E3F9C6;
         margin-top: 20px;
     }
-#formname{
+#name{
     display: grid;
     grid-column: 1 / span 3;
     grid-row: 1;
     border-bottom: 5px solid #E3F9C6;
     border-right: 5px solid #E3F9C6;
 }
-#countryname{
+#country{
     display: grid;
     grid-column: 4/ span 6;
     grid-row: 1;
     border-bottom: 5px solid #E3F9C6;
 }
-#emailname{
+#email{
     display: grid;
     grid-column: 1/ span 4;
     grid-row: 2; 
@@ -78,7 +84,6 @@ input{
 svg{
     max-width: 35px;
     height: auto;
-    display: grid;
     grid-column: 5/ span 6;
     grid-row: 2;
     justify-self: center;
