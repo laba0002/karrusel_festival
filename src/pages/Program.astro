@@ -2,20 +2,59 @@
 import "../styles/generel.css"
 import ArtistProgramView from "../components/ArtistProgramView.astro"
 import MainLayout from "../layouts/MainLayout.astro"
+
+// function dayFilter(params) {
+//   // Konstanter og variabler
+// const urlParams = new URLSearchParams(window.location.search);
+// const dayFilter = urlParams.get("day");
+
+// const activeDayFilterElement = document.querySelector(`.day-filter-group .m-${dayFilter}`);
+//   if(activeDayFilterElement) activeDayFilterElement.classList.add('active-day');
+
+//   document.querySelector(`.day-filter-group.${dayFilter}`).classList.add('show');
+
+
+//   document.querySelector(`.day-title.${dayFilter}`).classList.add('show');
+// }
+
+
 const response = await fetch("https://hzlnmksfeofnwrqcgxle.supabase.co/rest/v1/artists", {
     method: "GET", 
     headers: {
         apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6bG5ta3NmZW9mbndycWNneGxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2Mzk1MTQsImV4cCI6MjAyNTIxNTUxNH0.kkCz0Mlt8q5ERtHrXFhVCHziAFijhygJ6aZyOuUWZ6k"
     }
 }); 
-const data = await response.json();
+const data = await response.json()
+// .then(showDay);
 
+// function showDay (data) {
+
+//    // Filtrer på dag
+//    let filteredDay = data.filter(i => i.days.includes(dayFilter))
+  
+//   if(dayFilter) filteredDay = filteredDay.filter(i => i.days.includes(Number(dayFilter)));
+// }
+
+//function onDayFilterClick(day) {
+//   const url = new URL(window.location.href);   // Nuværende URL
+//   url.searchParams.set('day', day);        // Ændre dag
+//   window.location.href = url;                  // Ændrer url og genindlæser siden
+// }
 console.log("data", data);
 
 ---
 
 <MainLayout>
 <section>
+  <!-- <div class="flex-col filter">
+    <label for="day-filter">Choose day:</label>
+    <select id="day-filter">
+        <option value="thursday">thursday</option>
+        <option value="friday">friday</option>
+        <option value="saturday">saturday</option>
+    </select>
+  </div> -->
+
     {
         data.map((artist) => {
           return <ArtistProgramView data={artist} />;
@@ -25,3 +64,8 @@ console.log("data", data);
     
 	
 </MainLayout>
+
+<style>
+
+  
+</style>
