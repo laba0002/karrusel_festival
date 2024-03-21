@@ -10,6 +10,11 @@ img {
   display: block;
 }
 
+@font-face {
+  font-family: "titelfont";
+  src: url("/public/fonte/Sancreek-Regular.woff") format("woff");
+}
+
 main {
   max-width: 1400px;
   margin: auto;
@@ -33,6 +38,9 @@ body {
 
 h1 {
   color: var(--text-color);
+  font-family: "titelfont";
+  text-transform: uppercase;
+  font-size: 89.76;
 }
 
 h2 {
