@@ -29,10 +29,20 @@ import MainLayout from "../layouts/MainLayout.astro"
 </MainLayout>
 
 <style>
+  section{
+    padding-top:40px;
+  }
 #a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 130px;
+    background-color: #E3F9C6;
+    padding-top: 40px;
+    padding:#E3F9C6; ;
+
+    & p{
+        color: black;
+    }
 }
 p{
     margin-top: 15px;
@@ -51,5 +61,10 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 130px;
+}
+a{
+    color:#b5ff53;
+   font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
 }
 </style>
